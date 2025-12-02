@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongo_url");
-
+mongoose.connect("");
 const UserSchema = new mongoose.Schema({
+
     username: {type: String, required: true, unique: true},
     password: {type: String, required: true}
 });
@@ -14,6 +14,7 @@ const GamesSchema = new mongoose.Schema({
         x: Number,
         y: Number,
     }],
+    size: Number,
     winner: { type: mongoose.Types.ObjectId },
     status: String 
 })
